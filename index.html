@@ -1,16 +1,46 @@
+<!DOCTYPE html>
 <html>
     <head>
+    <title>Simple Interest Calculator</title>
+    <!--Mentioning where to look for CSS file and Javascrip file -->
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     </head>
+    <!-- Creating Div tag to apply style for this section alone-->
+<div class="maindiv">
     <body>
-        <h1>Simple Interest Calculator</h1>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
-    </body>
+        <h1>Simple Interest Calculator</h1> 
+        <!-- 2nd div is to make the input elements and the result to the centre and arranging them-->
+        <div class="div2">
+   <!-- Getting input for Principal amount and calling function to validate input-->
+        Amount &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <input onchange="checkInput()" type="number"  id="principal">  <br><br>
+  <!--Getting interest rate and making selected value appear through function -->
+        Interest Rate&nbsp  &nbsp &nbsp &nbsp<input onchange="updateRate()" type="range"  id="rate" min="1" max="20" value="10.25" step="0.25"> 
+        <span id="rate_val">10.25%</span>  &nbsp<br><br>
+   <!-- Getting no of years from dropdown-->     
+        No. of Years&nbsp &nbsp &nbsp &nbsp<select id="years">     
+        <!--creating drop down values -->
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        </select><br/><br>
+  <!--Calling compute function when button is clicked -->
+      <button onclick="compute()" id="interest">Compute Interest</button><br><br>
+      <!--Using span tag to make styling and Javascript easier to display results -->
+      <span id ="result"></span><br> 
+     </div>  
+</body>
+<footer>
+<!--adding copyright message -->
+        &#169; This Calculator belongs to Swathimani Rajendran
+</footer>
+  </div>
 </html>

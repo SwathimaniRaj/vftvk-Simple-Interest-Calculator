@@ -1,4 +1,41 @@
-body {background-color:tan;}
-h1{color:green;}
-
-
+body {background-color:black; 
+    font-family: arial; 
+    color:white}
+    h1{color:grey; 
+    font-family:Verdana}
+    #interest{
+      background-color:lightgray;
+    }
+    
+    .maindiv{
+        background-color:white;
+        color: black;
+        width: 500px;
+        padding: 20px;
+        border-radius: 25px;
+        
+    }
+    .div2{
+      width: 400px;
+      padding-left:100px;
+      border-radius:25px;
+      align:center;
+    }
+    #rate{
+      background: linear-gradient(to right, blue 0%, blue 50%, grey 50%, grey 100%);
+      border: solid 1px #82CFD0;
+      border-radius: 8px;
+      height: 7px;
+      width: 125px;
+      outline: none;
+      transition: background 450ms ease-in;
+      -webkit-appearance: none;
+    }
+    .highlight
+    {
+      background-color: yellow;
+    }
+    
+    
+    
+    
