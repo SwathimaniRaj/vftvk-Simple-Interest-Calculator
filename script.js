@@ -1,5 +1,16 @@
 function compute()
 {
+// create reference to validate input element
+var input = document.getElementById("principal");
+// check if principal value is 0 or nagative value
+    if(input.value <= 0 || input.value == "")
+    {
+    // if true raise alert window to request new input
+    alert("Please enter a positive number");
+    // returning focus to same input field
+    input.focus();
+    return false;
+    }
 // creating reference to get value from input fields
     var principal = document.getElementById("principal").value;
     var rate = document.getElementById("rate").value;
@@ -25,18 +36,5 @@ rateval.oninput=function(){
   this.style.background = 'linear-gradient(to right, blue 0%, blue ' + value + '%, grey ' + value + '%, grey 100%)'};   
 
 }
-function checkInput()
-{
-// create reference to validate input element
-var input = document.getElementById("principal");
-// check if principal value is 0 or nagative value
-    if(input.value <= 0 || input.value == "")
-    {
-    // if true raise alert window to request new input
-    alert("Please enter a positive number");
-    // returning focus to same input field
-    input.focus();
-    }
-    
-}
+
         
